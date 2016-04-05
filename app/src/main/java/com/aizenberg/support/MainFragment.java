@@ -17,7 +17,7 @@ public class MainFragment extends BaseFragment {
 
     private static final String TAG = MainFragment.class.getSimpleName();
 
-    @Id(value = R.id.progressBar)
+    @Id(R.id.progressBar)
     private ProgressBar progressBar;
 
     @Override
