@@ -131,13 +131,8 @@ public class MainFragment extends BaseFragment {
 
     private static final String TAG = MainFragment.class.getSimpleName();
 
-    @Id(value = R.id.progressBar)
+    @Id(R.id.progressBar)
     private ProgressBar progressBar;
-
-    @Override
-    protected void afterViewsInjected(Bundle savedInstanceState) {
-        super.afterViewsInjected(savedInstanceState);
-    }
 
     @Click(R.id.progressBar)
     public void progressClick(View view) {
