@@ -13,7 +13,7 @@ ext {
     siteUrl = 'https://github.com/YuraAAA/ViewInjector'
     gitUrl = 'https://github.com/YuraAAA/ViewInjector.git'
 
-    libraryVersion = '0.1.0'
+    libraryVersion = '0.1.1'
 
     developerId = 'yuriy-aizenberg'
     developerName = 'Yuriy Aizenberg'
