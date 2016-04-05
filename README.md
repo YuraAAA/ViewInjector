@@ -1,6 +1,20 @@
 # ViewInjector
 Simple view injector for android
 
+Table of Contents
+=================
+
+  * [Usage](#usage)
+      * [Dependency](#dependency)
+      * [Inject view](#inject-view)
+      * [Usage with fragments](#usage-with-fragments)
+      * [Setup click listener](#setup-click-listener)
+          * [With field annotations](#with-field-annotations)
+          * [With method annotations](#with-method-annotations)
+
+
+
+
 ## Usage
 
 ### Dependency
