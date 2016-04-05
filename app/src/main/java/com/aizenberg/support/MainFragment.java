@@ -19,11 +19,7 @@ public class MainFragment extends BaseFragment {
 
     @Id(R.id.progressBar)
     private ProgressBar progressBar;
-
-    @Override
-    protected void afterViewsInjected(Bundle savedInstanceState) {
-        super.afterViewsInjected(savedInstanceState);
-    }
+    
 
     @Click(R.id.progressBar)
     public void progressClick(View view) {
