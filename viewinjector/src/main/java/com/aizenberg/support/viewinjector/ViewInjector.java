@@ -79,16 +79,20 @@ public class ViewInjector {
             if (method.isAnnotationPresent(Click.class)) {
                 Click annotation = method.getAnnotation(Click.class);
                 int value = annotation.value();
-                final View targetView = reflectedViews.get(value);
+                View targetView = reflectedViews.get(value);
                 if (targetView == null) {
-                    reflectedViews.clear();
-                    throw new InjectionException("View for click method " + method.getName() + " with id " + value + " not found");
+                    //View not found in cache. Let's try to find it in layout!
+                    targetView = view.findViewById(value);
+                    if (targetView == null) {
+                        reflectedViews.clear();
+                        throw new InjectionException("View for click method " + method.getName() + " with id " + value + " not found. Check your xml");
+                    }
                 }
                 targetView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         try {
-                            method.invoke(clazz, targetView);
+                            method.invoke(clazz, v);
                         } catch (IllegalAccessException e) {
                             throw new InjectionException("IllegalAccessException: Method " + method.getName() + " can't be invoked. " + clazz.getClass().getName(), e);
                         } catch (InvocationTargetException e) {

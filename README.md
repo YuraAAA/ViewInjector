@@ -123,6 +123,21 @@ public class MainActivity extends Activity {
 }
 ```
 
+```java
+@Layout(R.layout.main_fragment)
+public class MainFragment extends BaseFragment {
+
+    private static final String TAG = MainFragment.class.getSimpleName();
+
+    @Id(value = R.id.progressBar, clickMethod = "progressClick")
+    private ProgressBar progressBar;
+
+    public void progressClick(View view) {
+        Log.d(TAG, "progressClick: ");
+    }
+}
+```
+
 #### With method annotations
 
 ```java
@@ -130,9 +145,6 @@ public class MainActivity extends Activity {
 public class MainFragment extends BaseFragment {
 
     private static final String TAG = MainFragment.class.getSimpleName();
-
-    @Id(R.id.progressBar)
-    private ProgressBar progressBar;
 
     @Click(R.id.progressBar)
     public void progressClick(View view) {

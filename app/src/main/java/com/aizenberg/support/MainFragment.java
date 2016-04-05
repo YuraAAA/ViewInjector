@@ -1,11 +1,9 @@
 package com.aizenberg.support;
 
-import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ProgressBar;
 
-import com.aizenberg.support.viewinjector.annotation.Click;
 import com.aizenberg.support.viewinjector.annotation.Id;
 import com.aizenberg.support.viewinjector.annotation.Layout;
 
@@ -17,11 +15,9 @@ public class MainFragment extends BaseFragment {
 
     private static final String TAG = MainFragment.class.getSimpleName();
 
-    @Id(R.id.progressBar)
+    @Id(value = R.id.progressBar, clickMethod = "progressClick")
     private ProgressBar progressBar;
 
-
-    @Click(R.id.progressBar)
     public void progressClick(View view) {
         Log.d(TAG, "progressClick: ");
     }
