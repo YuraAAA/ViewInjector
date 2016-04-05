@@ -19,7 +19,7 @@ public class MainFragment extends BaseFragment {
 
     @Id(R.id.progressBar)
     private ProgressBar progressBar;
-    
+
 
     @Click(R.id.progressBar)
     public void progressClick(View view) {
