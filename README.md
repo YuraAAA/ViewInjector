@@ -22,7 +22,7 @@ Table of Contents
 Add this line to your dependencies
 
 ```
-compile 'com.aizenberg:viewinjector:0.1.0'
+compile 'com.aizenberg:viewinjector:0.1.1'
 ```
 
 ### Inject view
